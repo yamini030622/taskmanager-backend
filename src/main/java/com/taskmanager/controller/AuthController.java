@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
+
 
 import com.taskmanager.dto.LoginRequest;
 import com.taskmanager.dto.RegisterRequest;
@@ -17,7 +17,10 @@ import com.taskmanager.service.UserService;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+	    "http://localhost:5173",
+	    "https://4bdd-103-206-105-88.ngrok-free.app"
+	})
 public class AuthController {
 
     @Autowired
